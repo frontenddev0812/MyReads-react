@@ -32,7 +32,7 @@ class SearchPage extends Component {
       if (resp.error) {
         this.clearBooks(); 
         alert('There are no results that match your current search. Please try again.')
-        this.clearBooks(); // calling the clearbooks function fixes a bug that shows searched books again after popup message.
+        this.clearBooks(); // calling the clearbooks function fixes a bug that shows searched books again after the popup message.
       } else {
         return this.setState({searchedBooks : resp})
       }
@@ -59,15 +59,23 @@ class SearchPage extends Component {
             <div className="search-books-results">
               <ol className="books-grid">
               {
-                this.state.searchedBooks.map(filteredBook => (
+                this.state.searchedBooks.map(filteredBook => {
+                  let shelf = "none"; 
+
+                  this.props.books.forEach(b => (
+                    b.id === filteredBook.id ?
+                    shelf = b.shelf : "none"  )
+                ); 
+                  return (
                   <li key={filteredBook.id}>
                   <Book 
                   book={filteredBook}
                   changeShelf = {this.props.changeShelf}
+                  currentShelf = {shelf}
                   />
                   </li>
-                ))
-              }
+                )
+              })}
               </ol>
             </div>
         </div>
