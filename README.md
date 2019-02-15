@@ -1,7 +1,7 @@
 # MyReads Project
 
 This is the starter template for the assessment project for Udacity's React Fundamentals and Front End Web Development Courses. I was given a starter template that did not include any code written in React. This is a Book Tracking Application. Use the arrows to move books between the shelves. Select none to remove the book completely. Click the + icon to search for books and add them to any one of the shelves. If a book does not have a shelf "none" will be selected by default.
-## How to 
+## How to use
 * download or clone 
 * using a terminal cd to the path of the project ex (cd Desktop/myreads-react)
 * install all project dependencies with `npm install`
