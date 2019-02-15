@@ -5,8 +5,7 @@ import {Link} from 'react-router-dom';
 
 
 class MainPage extends Component {
-    render () {
-        console.log(this.props.books); 
+    render () { 
         return (
             <div className="list-books">
             <div className="list-books-title">

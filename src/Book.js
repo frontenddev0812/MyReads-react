@@ -10,7 +10,7 @@ class Book extends Component {
                               <select
                               onChange={(e) => this.props.changeShelf(this.props.book, e.target.value)
                               }
-                              value={this.props.currentShelf}
+                              value={this.props.shelfName}
                               >
                                 <option value="move" disabled>Move to...</option>
                                 <option value="currentlyReading">Currently Reading</option>
@@ -21,7 +21,7 @@ class Book extends Component {
                             </div>
                           </div>
                           <div className="book-title">{this.props.book.title || "no title available"}</div>
-                          <div className="book-authors">{this.props.book.authors || "unknown author"}</div>
+                          <div className="book-authors">{this.props.book.authors  || "no known author "}</div>
                         </div>
         ); 
     }
