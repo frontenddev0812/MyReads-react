@@ -71,7 +71,7 @@ class SearchPage extends Component {
                   <Book 
                   book={filteredBook}
                   changeShelf = {this.props.changeShelf}
-                  currentShelf = {shelf}
+                  shelfName = {shelf}
                   />
                   </li>
                 )
